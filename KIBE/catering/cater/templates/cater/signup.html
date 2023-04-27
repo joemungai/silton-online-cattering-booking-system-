@@ -1,0 +1,20 @@
+{% extends 'cater/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title%} Home {% endblock title%}
+
+{% block content%} 
+<div class="sign">
+    <div id="sign-up">
+        <h2>Sign up</h2>
+    
+        <form method="post">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <button type="submit" class="btn btn-success">Sign up</button>
+        </form>
+        <p>Have an account?<a href="{% url 'login' %}">sign in</a></p>
+    </div>
+</div>
+
+{% endblock content%}

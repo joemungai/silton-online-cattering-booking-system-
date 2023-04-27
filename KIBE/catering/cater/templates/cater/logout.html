@@ -1,0 +1,16 @@
+{% extends 'cater/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title%} Logout Page {% endblock title%}
+
+{% block content%} 
+<div class="sign">
+    <div id="sign-up">
+        <h2>Logout</h2>
+        <div class="alert alert info">
+            You have been logged out. <a href="{% url 'login' %}">Login here</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content%}

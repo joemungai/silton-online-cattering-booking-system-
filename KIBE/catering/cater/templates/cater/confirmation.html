@@ -1,0 +1,19 @@
+{% extends 'cater/base.html' %}
+
+{% block content %}
+  <div class="container confirm">
+    <h1>Booking Confirmation</h1>
+    <p>Your booking for {{ package.title }} has been confirmed. We look forward to serving you.</p>
+    <p>Reservation details:</p>
+    <h2>Package Details:</h2>
+    <div class="crd_body container">
+      <h5 class="card-title">{{ package.title }}</h5>
+      
+        <p class="card-text">Package Team Number: {{ package.team_number }}</p>
+        <p class="card-text">Package Charging per Hour: {{ package.charging_per_hour }}</p>
+        <p class="card-text">Package Phone: {{ package.phone }}</p>
+     
+    </div>
+    <p class="confirm-para">For any questions or concerns, please contact us at {{ package.phone }}.</p>
+  </div>
+{% endblock %}

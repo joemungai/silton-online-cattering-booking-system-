@@ -1,0 +1,13 @@
+
+{% load crispy_forms_tags %}
+{% block content%}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<div class="home">
+
+  <h1>Welcome to Silton Catering Services</h1>
+    <a href="{% url 'decision' %}" class="btn btn-info">EXPLORE</a>
+</div>
+
+
+{% endblock content%}

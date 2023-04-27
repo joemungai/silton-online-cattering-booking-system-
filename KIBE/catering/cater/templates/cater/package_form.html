@@ -1,0 +1,14 @@
+{% extends 'cater/base.html' %}
+
+{% block content %}
+<div class="pkg-form">
+  <form method="POST" enctype="multipart/form-data" class="container form-merchant">
+
+    {% csrf_token %}
+    <h1 class="par-mer">Enter your Company's details</h1>
+    <hr class="par-mert">
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Save</button>
+  </form>
+</div>
+{% endblock %}

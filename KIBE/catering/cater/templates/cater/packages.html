@@ -1,0 +1,27 @@
+{% extends 'cater/base.html' %}
+
+
+{% block title%} Home {% endblock title%}
+
+{% block content%} 
+<div class="pkg-body">
+    <div class="package">
+
+
+        {% for package in object_list %}
+        <div class="card crd">
+            
+            <img src="{{ package.image.url }}" class="card-img-top img" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ package.title }}</h5>
+              <p class="card-text">{{ package.description|truncatewords:"10" }}</p>
+              <a href="{% url 'package-detail' package.id %}" class="btn btn-info">see more</a>
+          
+            </div>
+        </div>
+        {% endfor %}
+          
+    </div>
+</div>
+
+{% endblock content%}

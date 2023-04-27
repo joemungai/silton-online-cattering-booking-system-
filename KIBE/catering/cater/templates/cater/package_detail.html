@@ -1,0 +1,22 @@
+{% extends 'cater/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title%} Panesic Page {% endblock title%}
+
+{% block content%} 
+
+    <div class="card crd-ind">
+        <h5 class="card-title">{{ package.title }}</h5>
+                
+        <img src="{{ package.image.url }}" class="card-img-top img-ind" alt="...">
+        <div class="card-body">
+          <p class="card-text">Package Description: {{ package.description }}</p>
+          <p class="card-text">Package Team Number:{{ package.team_number}}</p>
+          <p class="card-text">Package Charging per Hour: {{ package.charging_per_hour }}</p>
+          <p class="card-text">Package Phone: {{ package.phone  }}</p>
+          <a href="{% url 'book_package' package.id %}" class="btn btn-success">BOOK</a>
+       
+        </div>
+    </div>
+    <hr>
+{% endblock content%}

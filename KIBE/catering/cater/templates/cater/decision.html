@@ -1,0 +1,19 @@
+{% extends 'cater/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title%}Decision Page{% endblock title%}
+
+{% block content%} 
+
+<div class="container decision">
+    <h1>Are you a client or a merchant?</h1>
+
+    <div>
+        <a href="{% url 'package' %}" class="btn btn-info">Client</a>
+        <a href="{% url 'merchant_package_detail' %}" class="btn btn-info">Merchant</a>
+    </div>
+    
+</div>
+
+
+{% endblock content%}
